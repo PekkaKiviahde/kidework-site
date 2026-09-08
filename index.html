@@ -39,7 +39,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .lead{font-size:clamp(18px,1.6vw,21px);color:var(--ink);max-width:34em;margin-bottom:32px}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 .cta-note{font-size:15px;color:var(--muted)}
-.phone{width:min(300px,100%);margin:0 auto;aspect-ratio:300/632;background:var(--navy);border-radius:36px;padding:12px;box-shadow:0 30px 60px -30px rgba(34,46,60,.45),0 0 0 1px rgba(0,0,0,.08)}
+.phone{width:min(300px,100%);margin:0 auto;aspect-ratio:300/545;background:var(--navy);border-radius:36px;padding:12px;box-shadow:0 30px 60px -30px rgba(34,46,60,.45),0 0 0 1px rgba(0,0,0,.08)}
 .phone .screen{width:100%;height:100%;border-radius:26px;overflow:hidden;background:var(--paper-2)}
 .slot{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:20px;background:repeating-linear-gradient(135deg,var(--paper-2) 0 12px,#E4E1DB 12px 24px);border:2px dashed #9AA3AE;color:var(--ink);font-family:var(--mono);font-size:13px;line-height:1.5}
 .slot strong{display:block;font-size:14px;margin-bottom:6px}
@@ -98,7 +98,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </div>
 </header>
 <main id="sisalto">
-<aside class="draft-note wrap" aria-label="Luonnoksen tila">Julkaisematon luonnos. Hinnat, tilausehdot ja vähimmäis-Android-versio tarkistetaan ennen julkaisua. Sovelluskuva ja video ovat paikkamerkkejä.</aside>
+<aside class="draft-note wrap" aria-label="Luonnoksen tila">Julkaisematon luonnos. Hinnat, tilausehdot ja vähimmäis-Android-versio tarkistetaan ennen julkaisua. Sovelluskuva on vc19-mockup: vastaavuus vc26-versioon tarkistetaan ennen julkaisua. Video on paikkamerkki.</aside>
 <section class="hero" id="tuote" aria-labelledby="otsikko">
 <div class="wrap">
 <div>
@@ -112,8 +112,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </div>
 <figure class="phone" aria-label="Sovelluksen näyttökuva">
 <div class="screen">
-<!-- KUVAN VAIHTO: korvaa alla oleva div.slot elementillä <img src="kuvat/nayttokuva-1.png" alt="Kide SiteCheck: havainnon kirjaus ja kuva"> suoraan div.screen-elementin sisään. Kuva skaalautuu koko näyttöön object-fit: contain -asetuksella (ei venymistä, ei leikkautumista); kehyksen sisämitta on 300/632, joten 1080×2280-pystykuva täyttää sen lähes kokonaan. -->
-<div class="slot" role="img" aria-label="Kuvapaikka: sovelluksen näyttökuva havainnon kirjauksesta"><span><strong>KUVAPAIKKA</strong>Sovelluksen näyttökuva<br>havainto + kuva<br>(pysty, 1080×2280)</span></div>
+<!-- KUVA: käyttäjän toimittama vc19-mockup, 1080×1875. TARKISTETTAVA vc26:tta vasten: otsikko 9. Sisätyövaihe, tarkastuspisteet, kaksi kuittausta ja Hyväksy-painike. Säilytä object-fit: contain, jotta kuva ei leikkaudu. -->
+<img src="kuvat/nayttokuva-1.png" alt="Kide SiteCheck: Sisätyövaiheen tarkastettavat kohdat, kaksi kohtaa kuitattu, Hyväksy-painike" width="1080" height="1875">
 </div>
 </figure>
 </div>
