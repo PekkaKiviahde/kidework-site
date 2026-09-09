@@ -31,7 +31,6 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;background:var(--navy);color:var(--white);font-weight:600;font-size:17px;border-radius:8px;text-decoration:none;border:2px solid var(--navy);transition:background .15s}
 .btn:hover{background:var(--navy-deep);color:var(--white)}
 .btn svg{width:18px;height:18px;flex:none}
-.draft-note{margin-top:20px;padding-top:12px;padding-bottom:12px;background:var(--warn-bg);color:var(--warn-ink);font-size:14px;border-left:4px solid var(--warn-line)}
 .hero{padding:72px 0 56px}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
 .eyebrow{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
@@ -41,19 +40,12 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .cta-note{font-size:15px;color:var(--muted)}
 .phone{width:min(300px,100%);margin:0 auto;aspect-ratio:1080/1875;background:var(--navy);border-radius:36px;padding:12px;box-shadow:0 30px 60px -30px rgba(34,46,60,.45),0 0 0 1px rgba(0,0,0,.08)}
 .phone .screen{width:100%;height:100%;border-radius:26px;overflow:hidden;background:var(--paper-2)}
-.slot{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:20px;background:repeating-linear-gradient(135deg,var(--paper-2) 0 12px,#E4E1DB 12px 24px);border:2px dashed #9AA3AE;color:var(--ink);font-family:var(--mono);font-size:13px;line-height:1.5}
-.slot strong{display:block;font-size:14px;margin-bottom:6px}
 .screen img{width:100%;height:100%;object-fit:contain;display:block;background:var(--navy)}
-.video-slot video{width:100%;height:100%;display:block;border-radius:12px;background:var(--navy);object-fit:contain}
-.phone .slot{border-radius:26px}
 .phone-fig{margin:0}
 .phone-fig figcaption{margin-top:14px;text-align:center;font-size:14px;color:var(--muted)}
 section{padding:64px 0}
 .section-title{font-size:clamp(26px,3vw,36px);margin-bottom:12px}
 .section-lead{color:var(--muted);font-size:18px;max-width:38em;margin-bottom:36px}
-.video{background:var(--white)}
-.video-slot{aspect-ratio:16/9;border-radius:12px}
-.video-slot .slot{border-radius:12px}
 .benefits{border-top:1px solid var(--line)}
 .benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .benefit{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px 26px}
@@ -96,11 +88,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <header class="top">
 <div class="wrap">
 <a class="brand" href="#otsikko" aria-label="KideWorks, sivun alkuun">KideWorks</a>
-<nav class="top-nav" aria-label="Sivun osiot"><a href="#tuote">Kide SiteCheck</a><a href="#hinta">Hinta</a><a href="#tuki">Tuki</a><a href="tietosuoja.html">Tietosuoja</a></nav>
+<nav class="top-nav" aria-label="Sivun osiot"><a href="#tuote">Kide SiteCheck</a><a href="#hinta">Hinta</a><a href="#tuki">Tuki</a></nav>
 </div>
 </header>
 <main id="sisalto">
-<aside class="draft-note wrap" aria-label="Luonnoksen tila">Julkaisematon luonnos. Vähimmäis-Android-versio tarkistetaan ennen julkaisua. Video on paikkamerkki.</aside>
 <section class="hero" id="tuote" aria-labelledby="otsikko">
 <div class="wrap">
 <div>
@@ -123,14 +114,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </figure>
 </div>
 </section>
-<section class="video" aria-labelledby="video-otsikko">
-<div class="wrap">
-<h2 class="section-title" id="video-otsikko">Näin yksi tarkastuskäynti tallennetaan</h2>
-<p class="section-lead">Lyhyt esittelyvideo näyttää yhden havainnon kirjauksen kuvineen ja valmiin PDF-raportin.</p>
-<!-- VIDEON VAIHTO: korvaa alla oleva div.slot elementillä <video controls preload="metadata" poster="kuvat/video-kansi.jpg" src="video/esittely.mp4"></video> div.video-slot-elementin sisään; video skaalautuu 16:9-alueeseen. Jos videota ei ole julkaisuhetkellä, poista koko <section class="video"> ja yläpalkin linkit säilyvät toimivina. -->
-<div class="video-slot"><div class="slot" role="img" aria-label="Paikkamerkki: esittelyvideo 45–60 sekuntia"><span><strong>Esittelyvideo – paikkamerkki</strong>45–60 s, MP4 1080p, 16:9<br>Ei toistopainiketta ennen kuin video on olemassa</span></div></div>
-</div>
-</section>
 <section class="benefits" id="hyodyt" aria-labelledby="hyodyt-otsikko">
 <div class="wrap">
 <h2 class="section-title" id="hyodyt-otsikko">Kolme asiaa, jotka Kide tekee työmaalla</h2>
@@ -146,7 +129,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <div class="wrap">
 <div><h2 class="section-title" id="faktat-otsikko">Hyvä tietää ennen lataamista</h2><p class="section-lead">Kide on tehty vastaavan mestarin omaan käyttöön, ei laajaksi yritysjärjestelmäksi.</p></div>
 <ul>
-<li>Android-puhelimelle. Vähimmäisversio tarkistetaan ennen julkaisua.</li>
+<li>Android-puhelimelle.</li>
 <li>Hanketiedot tallennetaan ensisijaisesti omalle laitteelle. Kideä käytetään ilman erillistä Kide-käyttäjätiliä.</li>
 <li>Varmuuskopio hankkeista otetaan sovelluksen omalla varmuuskopiotoiminnolla.</li>
 <li>Kide on työmaadokumentoinnin apuväline. Se ei korvaa viranomaisten katselmuksia eikä vastaavan työnjohtajan omaa harkintaa.</li>
@@ -170,7 +153,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </section>
 <section class="support" id="tuki" aria-labelledby="tuki-otsikko">
 <div class="wrap">
-<div><h2 class="section-title" id="tuki-otsikko">Tuki ja palaute</h2><p class="section-lead">Kysymykset käyttöönotosta, tilauksesta tai raportoinnista sähköpostilla. Vastaan muutamana arkipäivänä viikossa.</p></div>
+<div><h2 class="section-title" id="tuki-otsikko">Tuki ja palaute</h2><p class="section-lead">Kysymykset käyttöönotosta, tilauksesta tai raportoinnista sähköpostilla.</p></div>
 <div><a class="mail" href="mailto:kideasunnot@gmail.com?subject=Kide%20SiteCheck%20-%20tuki">kideasunnot@gmail.com</a><p class="cta-note" style="margin-top:10px">Kide SiteCheck on Pekka Kiviahteen oma, erillinen projekti.</p></div>
 </div>
 </section>
@@ -187,3 +170,4 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 </footer>
 </body>
 </html>
+
